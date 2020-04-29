@@ -1,0 +1,69 @@
+#1. Python :-  Addition of two numbers
+
+x=10
+y=20
+print(x+y)
+i= int(input("Enter first Number : "))
+j= int(input("Enter second Number : " ))
+print(i+j)
+
+#2. Python :- Factorial Number using function
+
+def factorial(n):
+    if n == 0:
+      return 0
+    elif n==1:
+      return 1
+    else:
+      return n * factorial(n-1)
+n=int(input("Input a number to compute the factorial : "))
+print(factorial(n))
+
+#2. Python:- Factorial Number using for loop
+
+num=int(input("Enter number to find Factorial : "))
+fact=1
+for x in range(1, num+1):
+  fact=fact*x
+
+print(fact)
+
+#3. Simple interest
+
+def Simple_Interest(P,R,T):
+  I= (P*T*R)/100
+  return I
+
+P= float(input("Enter principal a amount: "))
+T= float(input("Enter Time period in years : "))
+R= float(input("Enter interest rate : "))
+
+Interest = Simple_Interest(P, R, T)
+print("Simple interest is : " , Interest)
+
+#4, Compound Interest
+
+def compound_interest(principle, rate, time):
+    result = principle * (pow((1 + rate / 100), time))
+    return result
+
+
+p = float(input("Enter the principal amount: "))
+r = float(input("Enter the interest rate: "))
+t = float(input("Enter the time in years: "))
+
+amount = compound_interest(p, r, t)
+interest = amount - p
+print("Compound amount is %.2f" % amount)
+print("Compound interest is %.2f" % interest)
+
+#5. Area of Circle
+
+def Area_of_circle(Pi, r):
+  Area= Pi * r * r
+  return Area;
+
+  Pi= 3.14
+  r= float(input("Enter radius of Circle :"))
+  Area_of_circle(Pi, r)
+  print("Area of circle is : " , Area)
